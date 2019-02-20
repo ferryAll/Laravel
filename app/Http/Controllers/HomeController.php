@@ -7,14 +7,10 @@ use Illuminate\Http\Request;
 class HomeController extends Controller
 {
     function index() {
-    
+        $posts = \App\Post::all(); //get all posts
+        // var_dump($posts);
+        return view ('welcome', ['posts' => $posts]);
     }
-    
-    function createPosts(){
-        $table->id('id');
-        $table->date('post_date');
-        $table->string('post_title');
-        $table->text('post_content');
-        $table->timestamps();
-    }
+
+
 }

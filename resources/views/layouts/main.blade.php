@@ -27,8 +27,8 @@
     </div>
 
     <div class="row medium-8 large-7 columns">
-      
-    </div>
+      @yield('content')
+     </div>
 <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
 <script src="https://dhbhdrzi4tiry.cloudfront.net/cdn/sites/foundation.js"></script>
 <script>
