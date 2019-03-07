@@ -10,6 +10,16 @@ class Post extends Model
 
     public function author()
     {
-        return $this->belongsTo('App\User','post_author');
+         return $this->belongsTo('App\User', 'post_author');
     }
-}// <= à ne pas toucher 
+
+    public function posts()
+    {
+        
+    }
+
+
+
+
+} // <= à ne pas toucher 
+
