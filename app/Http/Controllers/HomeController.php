@@ -1,18 +1,30 @@
 <?php
 
 namespace App\Http\Controllers;
-
+use App\Post;
 use Illuminate\Http\Request;
 
 class HomeController extends Controller
 {
-    function index() {
-        $posts = \App\Post::orderBy('post_date', 'desc')->limit(3)->get(); //get all posts
-        // var_dump($posts)
-        return view ('welcome', ['posts' => $posts]);
+    /**
+     * Create a new controller instance.
+     *
+     * @return void
+     */
+    public function __construct()
+    {
+        // $this->middleware('auth');
     }
 
-    
+    /**
+     * Show the application dashboard.
+     *
+     * @return \Illuminate\Contracts\Support\Renderable
+     */
+    public function index()
+    {
+        $posts= Post::orderby('post_id', 'desc')->limit(3)->get(); //get post
 
-
+        return view('home', ['posts' => $posts]);
+    }
 }

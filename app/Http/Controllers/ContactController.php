@@ -1,16 +1,19 @@
 <?php
 
 namespace App\Http\Controllers;
-
+use App;
 use Illuminate\Http\Request;
+
+
 
 class ContactController extends Controller
 {
     public function contact() {
  
-        $contact_email = App\Get::where('contact_email')->first();
-        $contact_name = App\Get::where('contact_name');
-        $contact_message = App\Get::where('contact_message');
+        $contact_email = App\Contact::where('contact_email')->first();
+        $contact_name = App\Contact::where('contact_name');
+        $contact_message = App\Contact::where('contact_message');
         
+        return view('layouts/contact');
         }
 }

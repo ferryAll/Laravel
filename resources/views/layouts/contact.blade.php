@@ -1,3 +1,10 @@
+
+@extends('layouts.main')
+@section('content')
+
+
+
+
 <form action="{{ url('/contact') }}" method="POST">
     {{ csrf_field() }}
     <div class="form-group">
@@ -16,3 +23,4 @@
     </div>
     <button type="submit" class="btn btn-secondary">Envoyer !</button>
 </form>
+ @endsection
