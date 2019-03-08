@@ -17,16 +17,13 @@
 
 Route::get('/', 'HomeController@index');
 
-
-
 Route::get('/articles', 'HomeController@index');
 
 Route::get('/articles/{post_name}', 'PostsController@show');
 
 Route::get('/contact', 'ContactController@contact');
 
-// Route::get('/projects','ProjectsController@index');
-// Route::get('/projects/create','ProjectsController@create');
+Route::post('/contact', 'ContactController@store');
 
 // <------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------>
 

@@ -10,10 +10,18 @@ class ContactController extends Controller
 {
     public function contact() {
  
-        $contact_email = App\Contact::where('contact_email')->first();
-        $contact_name = App\Contact::where('contact_name');
-        $contact_message = App\Contact::where('contact_message');
-        
         return view('layouts/contact');
+        }
+
+        public function store() {
+            $contact=new App\Contact;
+            $contact->contact_name=request('contact_name');
+            $contact->contact_email=request('contact_email');
+            $contact->contact_message=request('contact_message');
+
+            $contact->save();
+
+            return view('message', ['message'=> "message enregistré"]); 
+          
         }
 }
