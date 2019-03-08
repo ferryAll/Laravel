@@ -6,7 +6,7 @@ use Illuminate\Http\Request;
 
 class ContactController extends Controller
 {
-    public function contact($contact_email, $contact_name, $contact_message) {
+    public function contact() {
  
         $contact_email = App\Get::where('contact_email')->first();
         $contact_name = App\Get::where('contact_name');

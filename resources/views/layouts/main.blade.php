@@ -14,7 +14,7 @@
                 <li class="menu-text">Blog</li>
                 <li><a href="#">Home</a></li>
                 <li><a href="#">Articles</a></li>
-                <li><a href="#">Contact</a></li>
+                <li><a href="/contact">Contact</a></li>
             </ul>
         </div>
     </div>
