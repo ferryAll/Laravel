@@ -13,13 +13,6 @@ class Post extends Model
          return $this->belongsTo('App\User', 'post_author');
     }
 
-    public function posts()
-    {
-        
-    }
-
-
-
 
 } // <= à ne pas toucher 
 

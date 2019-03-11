@@ -23,7 +23,9 @@ class HomeController extends Controller
      */
     public function index()
     {
-        $posts= Post::orderby('post_id','desc')->limit(3)->get(); //get post
+        // $posts= Post::orderby('post_id','desc')->limit(3)->get(); //get post
+        $posts= Post::all();
+        // dd($posts);
 
         return view('home', ['posts' => $posts]);
     }
