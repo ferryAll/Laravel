@@ -25,7 +25,7 @@ Route::get('/contact', 'ContactController@contact');
 
 Route::post('/contact', 'ContactController@store');
 
-
+// Route​::​resource​(​'admin/articles'​,​ ​'ArticlesController'​);
 
 // <------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------>
 

@@ -30,7 +30,7 @@
 <ul>
     
 @foreach($posts as $post)
-<li>{{$post->post_title}}</li>
+<li><a href=>{{$post->post_title }}</a></li>
 @endforeach
 </ul>
 @endsection
