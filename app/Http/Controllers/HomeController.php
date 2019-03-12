@@ -1,7 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
-use App\Post;
+
 use Illuminate\Http\Request;
 
 class HomeController extends Controller
@@ -13,7 +13,7 @@ class HomeController extends Controller
      */
     public function __construct()
     {
-        // $this->middleware('auth');
+        $this->middleware('auth');
     }
 
     /**
@@ -23,9 +23,6 @@ class HomeController extends Controller
      */
     public function index()
     {
-        $posts= Post::orderby('post_id','desc')->limit(3)->get(); //get posts
-        // dd($posts);
-
-        return view('home', ['posts' => $posts]);
+        return view('home');
     }
 }
